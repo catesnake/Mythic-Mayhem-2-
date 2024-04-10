@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class Player_Movement : MonoBehaviour
 {
-    public Rigidbody rigidbody;
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private LayerMask layerMask;
 
-    private void Start()
+    private void Update()
     {
-        InvokeRepeating("SetPlayerPosition", 0f, 10f);
-    }
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, layerMask))
+        {
 
-    void SetPlayerPosition()
-    {
-        rigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 1, Input.mousePosition.z));
+            Vector3 vec = raycastHit.point;
+            vec.y = 1f;
+            transform.position = vec;
+        }
     }
 }

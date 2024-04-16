@@ -5,12 +5,18 @@ using UnityEngine;
 public class Random_Generation : MonoBehaviour
 {
 
-    // Update is called once per frame
+    public GameObject enemy;
+    public GameObject player;
+
+    
     void Update()
     {
-        if (Random.Range(0,2) == 0)
+        Vector3 spawnLocation = player.transform.position;
+        spawnLocation.x -= 10;
+        
+        if (Random.Range(0,1500) == 0)
         {
-            
+            Instantiate(enemy, spawnLocation, transform.rotation);
         }
     }
 }

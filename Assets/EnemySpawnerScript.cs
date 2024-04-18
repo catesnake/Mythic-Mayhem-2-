@@ -10,6 +10,7 @@ public class EnemySpawnerScript : MonoBehaviour
     public float speed;
     public float spawnRate = 2;
     private float timer = 0;
+    private int count = 1;
 
 
     // Update is called once per frame
@@ -23,13 +24,14 @@ public class EnemySpawnerScript : MonoBehaviour
         }
         else
         {
-            Instantiate(enemy, transform.position, transform.rotation);
+            GameObject badGuy = Instantiate(enemy, transform.position, transform.rotation);
+            badGuy.name = "Enemy" + count;
+            count++;
             timer = 0;
+            
         }
+        
 
-        if (enemy.transform.position.x > (player.transform.position.x + 10))
-        {
-            Destroy(enemy);
-        }
+
     }
 }

@@ -7,16 +7,28 @@ public class Random_Generation : MonoBehaviour
 
     public GameObject enemy;
     public GameObject player;
+    public float spawnRate = 2;
+    private float timer = 0;
 
     
     void Update()
     {
         Vector3 spawnLocation = player.transform.position;
-        spawnLocation.x -= 10;
+        spawnLocation.x -= 30;
         
-        if (Random.Range(0,1500) == 0)
+        if (timer < spawnRate)
+        {
+            timer += Time.deltaTime;
+        }
+        else
         {
             Instantiate(enemy, spawnLocation, transform.rotation);
+            timer = 0;
+        }
+        
+        if (enemy.transform.position.x > (player.transform.position.x +10))
+        {
+            Destroy(enemy);
         }
     }
 }

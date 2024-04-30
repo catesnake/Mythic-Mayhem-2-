@@ -9,10 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: d4109f8e4aa9d7a4281969f8329d44db
   - enabled: 1
-    path: Assets/Scenes/GamePlay.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 34c4ed18f6629704dafcef61c486b168
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 840c59eb668a80b418c3045d82f0880e
+  - enabled: 1
+    path: Assets/Scenes/Beasts.unity
+    guid: cf71ed8d93e5cc84f93a3e80a006fa75
+  - enabled: 1
+    path: Assets/Scenes/Level 1 - Grassland.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Level 2 - Medieval.unity
+    guid: 38c8a1214c0fc9d47a28e4ad008f2c2a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -11,7 +11,7 @@ public class Collect_Coin : MonoBehaviour
     void Update()
     {
         Debug.Log(coinCount);
-        coinText.text = "Coin: " + coinCount.ToString("0");
+        coinText.text = "Coins: " + coinCount.ToString("0");
     }
     
     void OnTriggerEnter(Collider collision)

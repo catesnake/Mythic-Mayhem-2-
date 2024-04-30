@@ -17,7 +17,7 @@ public class LooseHealth_Player : MonoBehaviour
         healthText.text = "Health: " + health.ToString("0");
         if (health == 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
     }
     void OnTriggerEnter(Collider collision)

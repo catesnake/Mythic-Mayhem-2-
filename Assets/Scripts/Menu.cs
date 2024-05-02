@@ -32,7 +32,6 @@ public class Menu : MonoBehaviour
     {
         player.transform.GetChild(0).gameObject.SetActive(true);
         player.transform.GetChild(2).gameObject.SetActive(false);
-        creature = 1;
     }
 
     public void Dragon()

@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52eb47c0d7242654582f2f5f8c3b3fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6275653132321617768, guid: 3c1d5a5d5e4b06a4794b2db7f35b670a, type: 3}
+  player: {fileID: 8741243048447590570, guid: 5ac107e2309c29f49a23991295ac84e8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -6,8 +6,11 @@ public class Camera_Movement : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     public float speed;
+    public Transform t;
+
+
     void Update()
     {
-        mainCamera.transform.position = new Vector3(mainCamera.transform.position.x - speed, mainCamera.transform.position.y, mainCamera.transform.position.z);
+        t.position = new Vector3(t.position.x - speed, t.position.y, t.position.z);
     }
 }

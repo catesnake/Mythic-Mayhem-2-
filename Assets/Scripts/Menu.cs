@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public GameObject player;
-    public int creature;
     public void StartGame()
     {
         SceneManager.LoadScene(4);
@@ -38,6 +37,5 @@ public class Menu : MonoBehaviour
     {
         player.transform.GetChild(0).gameObject.SetActive(false);
         player.transform.GetChild(2).gameObject.SetActive(true);
-        creature = 2;
     }
 }

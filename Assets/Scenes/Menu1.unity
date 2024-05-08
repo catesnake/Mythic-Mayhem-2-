@@ -1444,8 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8741243048447590570, guid: 5ac107e2309c29f49a23991295ac84e8, type: 3}
-  uni: 0
-  drag: 0
+  creature: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

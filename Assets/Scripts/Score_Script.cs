@@ -5,10 +5,15 @@ using UnityEngine.UI;
 
 public class Score_Script : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
     public Text scoreText;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
     void Update()
     {
-        scoreText.text = (-1*(player.position.x)).ToString("0");
+        scoreText.text = (-1*(player.transform.position.x)).ToString("0");
     }
 }

@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class Collect_Coin : MonoBehaviour
 {
-    private int coinCount = 0;
+    private int coinCount = GameManager.Instance.coins;
     public Text coinText;
 
+    private void Start()
+    {
+        coinCount = GameManager.Instance.coins;
+    }
     void Update()
     {
         Debug.Log(coinCount);
@@ -19,8 +23,7 @@ public class Collect_Coin : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             coinCount++;
-            
-
+            GameManager.Instance.coins += coinCount;
         }
 
     }

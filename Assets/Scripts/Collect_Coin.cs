@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Collect_Coin : MonoBehaviour
 {
-    private int coinCount = GameManager.Instance.coins;
+    public int coinCount = GameManager.Instance.coins;
     public Text coinText;
 
     private void Start()

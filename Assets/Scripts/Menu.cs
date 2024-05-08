@@ -3,10 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
     public GameObject player;
+    public Text mainCoinText;
+    public Text coinText;
+    public int coins;
+
+    void Start()
+    {
+        coins += coinText.GetComponent<Collect_Coin>().coinCount;
+        mainCoinText.text = "Coins: " + coins;
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(4);

@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1600316598735037048
 Transform:
   m_ObjectHideFlags: 0
@@ -499,6 +499,7 @@ MonoBehaviour:
   health: 3
   healthText: {fileID: 0}
   gameOverUI: {fileID: 0}
+  loaded: 1
 --- !u!114 &606758227954559587
 MonoBehaviour:
   m_ObjectHideFlags: 0

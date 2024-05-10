@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Player_Collect : MonoBehaviour
 {
-    private int coinCount = 0;
+    public int coinCount = 0;
     public Text coinText;
 
     // Update is called once per frame

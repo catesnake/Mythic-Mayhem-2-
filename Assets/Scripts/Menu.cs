@@ -9,12 +9,11 @@ public class Menu : MonoBehaviour
 {
     public GameObject player;
     public Text mainCoinText;
-    public Text coinText;
     public int coins;
 
     void Start()
     {
-        coins += coinText.GetComponent<Collect_Coin>().coinCount;
+        coins += player.GetComponent<Player_Collect>().coinCount;
         mainCoinText.text = "Coins: " + coins;
     }
     public void StartGame()

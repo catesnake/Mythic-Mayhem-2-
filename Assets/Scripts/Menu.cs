@@ -8,13 +8,13 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public GameObject player;
-    public Text mainCoinText;
+    //public Text mainCoinText;
     public int coins;
 
     void Start()
     {
-        coins += player.GetComponent<Player_Collect>().coinCount;
-        mainCoinText.text = "Coins: " + coins;
+        //coins += player.GetComponent<Player_Collect>().coinCount;
+        //mainCoinText.text = "Coins: " + coins;
     }
     public void StartGame()
     {

@@ -10,6 +10,7 @@ public class LooseHealth_Player : MonoBehaviour
     public Text healthText;
     public GameObject gameOverUI;
     public bool loaded = true;
+    public GameObject gameScreen;
 
 
     // Update is called once per frame
@@ -19,8 +20,14 @@ public class LooseHealth_Player : MonoBehaviour
         if (health == 0 && loaded)
         {
             loaded = false;
+            gameScreen.SetActive(false);
             SceneManager.LoadScene(1);
         }
+    }
+
+    private void Awake()
+    {
+        gameScreen = GameObject.FindWithTag("GameScreen");
     }
     void OnTriggerEnter(Collider collision)
     {

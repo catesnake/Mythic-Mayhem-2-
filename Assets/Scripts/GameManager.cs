@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public GameObject camera;
+
     public int coins;
 
     private void Awake()
@@ -22,5 +24,11 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         Debug.Log("scence: "+SceneManager.GetActiveScene().buildIndex);
+        camera = GameObject.FindWithTag("MainCamera");
+    }
+
+    private void Start()
+    {
+        camera.transform.position = new Vector3(-2.58f, 13.35f, 1.23f);
     }
 }
